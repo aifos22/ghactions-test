@@ -1,0 +1,21 @@
+{
+    "name": "Hospital Salud Total",
+    "short_name": "Salud Total",
+    "description": "Aplicación web del Hospital Salud Total para agendar citas y acceder a servicios médicos.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0097b2",
+    "theme_color": "#0cc0df",
+    "icons": [
+        {
+            "src": "/assets/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

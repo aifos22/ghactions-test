@@ -1,0 +1,6 @@
+#cont-boton-registro {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    margin-left: 200px;
+}

@@ -1,0 +1,141 @@
+#contenedor-general {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    align-items: start;
+    justify-items: stretch;
+    gap: 50px;
+}
+
+@media (max-width: 1000px) {
+    #contenedor-general {
+        grid-template-columns: 1fr;
+    }
+
+    #contenedor-formularios-doctor {
+        margin-left: 0;
+    }
+
+    #contenedor-formularios-doctor input {
+        width: 200px;
+    }
+
+    #contenedor-formularios-paciente {
+        margin-left: 0;
+    }
+
+    #contenedor-formularios-paciente input {
+        width: 200px;
+    }
+
+    #form-datos-doctor {
+        width: 300px;
+    }
+
+    #form-datos-paciente {
+        width: 300px;
+    }
+}
+
+#contenedor-formularios-doctor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px;
+    gap: 30px;
+}
+
+#contenedor-formularios-paciente {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+#btn-submit-appointment {
+    width: 400px;
+    border-radius: 12px;
+    border: 1px solid #f07604;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 5px;
+    background-color: #f07604;
+    transition: 0.5s;
+  }
+  
+  #btn-submit-appointment span {
+    color: white;
+    font-weight: 400;
+  }
+  
+  #btn-submit-appointment:hover {
+    transform: scale(97%);
+  }
+
+  #btn-submit-appointment:disabled {
+    background-color: #f07604;
+    opacity: 0.5;
+  }
+
+  #btn-submit-appointment:disabled:hover {
+    transform: none;
+  }
+
+  @media (max-width: 576px) {
+    #btn-submit-appointment {
+      width: 320px;
+    }
+  }
+
+  #form-datos-doctor {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border: 0.3px solid #80808047;
+    border-radius: 15px; 
+    padding: 40px;
+  }
+
+  #form-datos-doctor input {
+    padding: 10px;
+    width: 400px;
+    border-radius: 12px;
+    border: 1.3px solid #d1c8c8;
+  }
+
+  #form-datos-paciente {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border: 0.3px solid #80808047;
+    border-radius: 15px; 
+    padding: 40px;
+  }
+
+  #form-datos-paciente input {
+    padding: 10px;
+    width: 400px;
+    border-radius: 12px;
+    border: 1.3px solid #d1c8c8;
+  }
+
+  #contenedor-horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+  }
+
+ 
+
+
+  
+  
+  

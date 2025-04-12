@@ -1,0 +1,30 @@
+#cards-doctores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 950px) {
+    #cards-doctores {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* EquipoPage.css */
+.filter-section {
+    margin-bottom: 20px;
+}
+
+#specialtyFilter {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

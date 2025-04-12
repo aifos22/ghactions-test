@@ -1,0 +1,24 @@
+#service-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media (max-width: 768px) {
+    #service-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+#search-input {
+    width: 400px;
+    margin-bottom:30px;
+}
+
+#service-container {
+    padding: 0.5rem;
+    margin: 1rem;
+}
