@@ -1,25 +1,25 @@
 // service-worker.js
 
-const CACHE_NAME = 'hospitalPWA-cache-v1';
-const STATIC_FILES = [
-    '/index.html',
-    '/assets/styles.css',
-    '/assets/script.js',
-    '/assets/logo.png',
-    // Puedes agregar más archivos estáticos que necesiten estar en caché
-];
+// const CACHE_NAME = 'hospitalPWA-cache-v1';
+// const STATIC_FILES = [
+//     '/index.html',
+//     '/assets/styles.css',
+//     '/assets/script.js',
+//     '/assets/logo.png',
+//     // Puedes agregar más archivos estáticos que necesiten estar en caché
+// ];
 
-// Instalar el Service Worker
-self.addEventListener('install', (event) => {
-    console.log('Service Worker instalado');
-    // Durante la instalación, abrimos el caché y almacenamos los archivos estáticos
-    event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            console.log('Archivos en caché durante la instalación');
-            return cache.addAll(STATIC_FILES);
-        })
-    );
-});
+// // Instalar el Service Worker
+// self.addEventListener('install', (event) => {
+//     console.log('Service Worker instalado');
+//     // Durante la instalación, abrimos el caché y almacenamos los archivos estáticos
+//     event.waitUntil(
+//         caches.open(CACHE_NAME).then((cache) => {
+//             console.log('Archivos en caché durante la instalación');
+//             return cache.addAll(STATIC_FILES);
+//         })
+//     );
+// });
 
 // Activar el Service Worker
 self.addEventListener('activate', (event) => {
