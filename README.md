@@ -11,7 +11,21 @@ Currently, two official plugins are available:
 
 # Usuario de pruebas
 
+### Puedfes utilizar el siguiente usuario para poder llevar a cabo pruebas dentro de la web
+
 ```
 Correo: user@email.com
 Contraseña: user123
+```
+
+# Contenerización de la aplicación
+
+```
+Construir la imagen en base al *Dockerfile* que se encuentra en la raíz del proyecto. Ejecutar en puerto 5173.
+```
+
+# Prueba unitaria de componente
+
+```
+Se crea el componente *Button.tsx* para ejemplificar un test unitario por medio de la librería *Jest*
 ```

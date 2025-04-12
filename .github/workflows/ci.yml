@@ -1,0 +1,52 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: ["main", "dev"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:  # Primer job (sin dependencias)
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Test coverage
+        run: npm test -- --coverage
+        if: success()
+
+  docker-build:  # Segundo job (depende de test)
+    name: Build Docker Image
+    needs: test  # Depende del job 'test'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image
+        run: docker build -t clinica-web .
+
+      - name: Run container test
+        run: |
+          docker run -d --name clinica-web -p 5173:8080 clinica-web
+          sleep 5
+          docker ps | grep clinica-web
+          curl -I http://localhost:5173

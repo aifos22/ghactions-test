@@ -1,7 +1,7 @@
 {
-    "name": "Hospital Salud Total",
-    "short_name": "Salud Total",
-    "description": "Aplicación web del Hospital Salud Total para agendar citas y acceder a servicios médicos.",
+    "name": "Clínica Cuerpo y Alma",
+    "short_name": "Cuerpo y Alma",
+    "description": "Aplicación web de Clínica Cuerpo y Alma para agendar citas y acceder a servicios médicos.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#0097b2",
