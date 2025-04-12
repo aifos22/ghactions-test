@@ -11,5 +11,7 @@ Currently, two official plugins are available:
 
 # Usuario de pruebas
 
+```
 Correo: user@email.com
 Contraseña: user123
+```
