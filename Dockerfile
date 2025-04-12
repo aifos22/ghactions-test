@@ -2,9 +2,9 @@
 FROM public.ecr.aws/docker/library/node:20-alpine AS builder
 WORKDIR /app
 
-# 1. Copia solo lo necesario para instalar dependencias
+# 1. Copia el package.json 
 COPY package*.json ./
-RUN npm ci --omit=dev  # Más rápido y seguro para CI
+RUN npm ci 
 
 # 2. Copia el resto y construye
 COPY . .
